@@ -16,14 +16,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            ChartOfAccountSeeder::class,
-            SavingTypeSeeder::class,
-        ]);
-
-        User::factory()->create([
-            'name' => 'Admin Koperasi',
-            'email' => 'admin@ksp.com',
-            'password' => \Illuminate\Support\Facades\Hash::make('password'),
+            UserSeeder::class,
+            MasterDataSeeder::class,
+            MemberSeeder::class,
+            TransactionSeeder::class,
         ]);
     }
 }

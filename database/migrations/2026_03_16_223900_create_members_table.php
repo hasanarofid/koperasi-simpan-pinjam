@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('member_group_id')->nullable()->constrained()->onDelete('set null');
             $table->string('member_number')->unique();
             $table->string('nik')->unique();
             $table->string('name');

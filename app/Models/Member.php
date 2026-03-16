@@ -22,4 +22,9 @@ class Member extends Model
     {
         return $this->hasMany(Loan::class);
     }
+
+    public function group()
+    {
+        return $this->belongsTo(MemberGroup::class, 'member_group_id');
+    }
 }

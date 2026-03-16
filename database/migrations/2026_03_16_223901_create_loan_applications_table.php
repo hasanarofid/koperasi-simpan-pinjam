@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('member_id')->constrained()->onDelete('cascade');
             $table->foreignId('loan_scheme_id')->constrained();
             $table->decimal('amount_requested', 15, 2);
-            $table->integer('duration'); // in months/weeks
+            $table->integer('duration_months'); // in months
             $table->text('purpose')->nullable();
             $table->enum('status', ['pending', 'approved', 'rejected', 'cancelled'])->default('pending');
             $table->text('rejection_reason')->nullable();

@@ -18,7 +18,7 @@ class Loan extends Model
         return $this->belongsTo(LoanApplication::class, 'loan_application_id');
     }
 
-    public function scheme()
+    public function loanScheme()
     {
         return $this->belongsTo(LoanScheme::class, 'loan_scheme_id');
     }
